@@ -1,0 +1,20 @@
+{
+  "name": "entregable1_backend_lisette_miranda",
+  "version": "1.0.0",
+  "description": "Proyecto tienda",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "Lisette Miranda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
