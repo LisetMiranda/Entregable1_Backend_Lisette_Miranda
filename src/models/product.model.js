@@ -1,43 +1,17 @@
-import mongoose from "mongoose";
-
-const productSchema = new mongoose.Schema({
-    title: {
-        type: String, 
-        required: true
-    },
-    description: {
-        type: String, 
-        required: true
-    },
-    price: {
-        type: Number, 
-        required: true
-    },
-    img: {
-        type: String, 
-    },
-    code: {
-        type: String, 
-        required: true,
-        unique: true
+import {Schema, model} from "mongoose";
+const collection = "products";
+const Schema = new Schema(
+    {
+    title: { type: String, required: true },
+    description: { type: String,  required: true },
+    price: { type: Number,  default:1},
+    stock: { type: Number,  default: 10},
+    img:[ { type: String, default: ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fdominandoelecommerce.com%2Ftipos-fotografia-para-ecommerce%2F&psig=AOvVaw0Ygv_fXChu7e02bITULpcj&ust=1743547907380000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCTzqK0tYwDFQAAAAAdAAAAABAE"]}],
+    onsale:{ type: Boolean, default: false},
+    owner_id: {type: String, required: true},
     }, 
-    stock: {
-        type: Number, 
-        required: true
-    },
-    category: {
-        type: String, 
-        required: true
-    },
-    status: {
-        type: Boolean, 
-        required: true
-    }, 
-    thumbnails: {
-        type: [String]
-    }
-})
+    {timestamps: true}
+);
 
-const ProductModel = mongoose.model("products", productSchema);
-
-export default ProductModel; 
+const Product = model(collection, Schema);
+export default Product; 

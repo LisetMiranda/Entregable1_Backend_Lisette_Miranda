@@ -1,31 +1,19 @@
-import express from "express"; 
-const router = express.Router();
-import CartManager from "../managers/cart-manager.js";
-const manager = new CartManager("./src/data/carts.json");
+import CustomRouter from "../utils/CustomRouter.util.js";
+import { addProductToCart, readProductsFromUser, updateQuantity, updateState, removeProductFromCart } from "../controllers/carts.controller.js";
 
-router.post("/", async (req, res) => {
-    try {
-        const nuevoCarrito = await manager.crearCarrito(); 
-        res.json(nuevoCarrito);
-    } catch (error) {
-        res.status(500).send("Error al crear carrito"); 
-    }
-})
+class ProductsRouter extends CustomRouter {
+  constructor() {
+    super();
+    this.init();
+  }
+  init = () => {
+    this.create("/", ["USER", "ADMIN"], addProductToCart);
+    this.read("/", ["USER"], readProductsFromUser);
+    this.update("/:cart_id", ["USER", "ADMIN"], updateQuantity);
+    this.update("/:cart_id/:state", ["USER", "ADMIN"], updateState);
+    this.destroy("/:cart_id", ["USER", "ADMIN"], removeProductFromCart);
+  };
+}
 
-router.post("/:cid/product/:pid", async (req, res) => {
-    let cartId = req.params.cid;
-    let productId = req.params.pid; 
-    let quantity = req.body.quantity || 1; 
-
-    try {
-        const actualizarCarrito = await manager.agregarProductoAlCarrito(parseInt(cartId), parseInt(productId), quantity); 
-
-        res.json(actualizarCarrito.products); 
-
-    } catch (error) {
-        res.status(500).send("Error al agregar productos al carrito");
-    }
-})
-
-
-export default router; 
+const productsRouter = new ProductsRouter();
+export default productsRouter.getRouter();

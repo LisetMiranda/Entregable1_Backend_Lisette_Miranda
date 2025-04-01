@@ -5,12 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node --watch ./index.js",
     "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "Lisette Miranda",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.0",
     "express-handlebars": "^8.0.1",
     "moment": "^2.30.1",
