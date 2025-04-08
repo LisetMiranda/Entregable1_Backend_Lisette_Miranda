@@ -15,6 +15,6 @@ class UsersRouter extends CustomRouter {
     this.destroy("/:user_id", ["USER", "ADMIN"], passportCb("jwt-auth"), destroyOneUser);
   };
 }
-
+ 
 const usersRouter = new UsersRouter();
 export default usersRouter.getRouter();
