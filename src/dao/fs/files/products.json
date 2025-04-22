@@ -1,0 +1,101 @@
+[
+    {
+    "id":1,
+    "title":"Remera",
+    "description":"Remera Basica",
+    "price":100,
+    "img":"https://images.app.goo.gl/q8Bmcv8AjSGg6hEN6",
+    "code":"ABC170",
+    "stock":20
+    },
+    {
+    "id":2,
+    "title":"Pantalon",
+    "description":"Pantalon Recto",
+    "price":200,
+    "img":"https://images.app.goo.gl/U8KcafYStwkEupZc9",
+    "code":"ABC171",
+    "stock":20
+    },
+    {
+    "id":3,
+    "title":"Buso",
+    "description":"Buso Basico",
+    "price":200,
+    "img":"https://images.app.goo.gl/CeKPKapLcvpykWJr6",
+    "code":"ABC172",
+    "stock":20
+    },
+    {
+    "id":4,
+    "title":"Zapatillas",
+    "description":"Zapatillas Deportivas",
+    "price":300,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC173",
+    "stock":20
+    },
+    {
+    "id":5,
+    "title":"Short",
+    "description":"short shin",
+    "price":200,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC174",
+    "stock":20
+    },
+    {
+    "id":6,
+    "title":"Musculosa",
+    "description":"Musculosa basica",
+    "price":200,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC175",
+    "stock":20
+    },
+    {
+    "id":7,
+    "title":"Manga larga",
+    "description":"Remera manga larga",
+    "price":150,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC176",
+    "stock":20
+    },
+    {
+    "id":8,
+    "title":"Campera",
+    "description":"campera liviana",
+    "price":250,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC177",
+    "stock":20
+    },
+    {
+    "id":9,
+    "title":"Camperon ",
+    "description":"camperon abrigado",
+    "price":300,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC178",
+    "stock":20
+    },
+    {
+    "id":10, 
+    "title":"Jogin",
+    "description":"Jogin de algodon",
+    "price":100,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC179",
+    "stock":20
+    },
+    {
+    "id":11,
+    "title":"Calsa",
+    "description":"calsa Deportiva",
+    "price":100,
+    "img":"https://images.app.goo.gl/wi5LspGEq2JQWtA99",
+    "code":"ABC180",
+    "stock":20
+    }
+]
